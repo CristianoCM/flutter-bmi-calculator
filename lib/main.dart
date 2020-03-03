@@ -15,19 +15,60 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Body Mass Index Calculator"),
-        centerTitle: true,
-        backgroundColor: Colors.purple,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.refresh,
+        appBar: AppBar(
+          title: Text("Body Mass Index Calculator"),
+          centerTitle: true,
+          backgroundColor: Colors.purple,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.refresh,
+              ),
+              onPressed: () {},
+            )
+          ],
+        ),
+        backgroundColor: Colors.white,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Icon(
+              Icons.person_outline,
+              size: 120.0,
+              color: Colors.purple,
             ),
-            onPressed: () {},
-          )
-        ],
-      ),
-    );
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                  labelText: "Mass (kg)",
+                  labelStyle: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25.0,
+                  )
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.purple, 
+                fontSize: 25.0
+              ),
+            ),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                  labelText: "Height (m)",
+                  labelStyle: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25.0,
+                  )
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.purple, 
+                fontSize: 25.0
+              ),
+            ),
+          ],
+        ));
   }
 }
