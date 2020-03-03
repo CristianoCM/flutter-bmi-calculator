@@ -29,46 +29,62 @@ class _HomeState extends State<Home> {
           ],
         ),
         backgroundColor: Colors.white,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Icon(
-              Icons.person_outline,
-              size: 120.0,
-              color: Colors.purple,
-            ),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Mass (kg)",
-                  labelStyle: TextStyle(
+        body: SingleChildScrollView(
+          padding: EdgeInsets.fromLTRB(30.0, 15.0, 30.0, 0.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Icon(
+                Icons.person_outline,
+                size: 120.0,
+                color: Colors.purple,
+              ),
+              TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    labelText: "Mass (kg)",
+                    labelStyle: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 25.0,
+                    )),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.purple, fontSize: 25.0),
+              ),
+              TextField(
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                    labelText: "Height (m)",
+                    labelStyle: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 25.0,
+                    )),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.purple, fontSize: 25.0),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 50.0, bottom: 35.0),
+                child: Container(
+                  height: 70.0,
+                  child: RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Calculate",
+                      style: TextStyle(fontSize: 18.0, color: Colors.white),
+                    ),
                     color: Colors.purple,
-                    fontSize: 25.0,
-                  )
+                  ),
+                ),
               ),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.purple, 
-                fontSize: 25.0
-              ),
-            ),
-            TextField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  labelText: "Height (m)",
-                  labelStyle: TextStyle(
-                    color: Colors.purple,
-                    fontSize: 25.0,
-                  )
-              ),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.purple, 
-                fontSize: 25.0
-              ),
-            ),
-          ],
+              Text(
+                "Info",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.purple,
+                  fontSize: 18.0,
+                ),
+              )
+            ],
+          ),
         ));
   }
 }
